@@ -12,8 +12,10 @@ import org.jfugue.theory.Note;
  * 
  * Mirror of subversion repository: JFugue - Java API for Music Programming http://code.google.com/p/jfugue/
  * 
- * La idea passar-ho a pom.xml
+ * Proper pas, passar-ho a maven (pom.xml)
  * http://www.tech-recipes.com/rx/39256/add-dependencies-to-maven-pom-xml-file/
+ * https://bitacoras.citius.usc.es/tecnologia/2013/12/18/gestion-de-dependencias-de-terceros-con-maven/
+ * (p.ex jetty)
  * 
  * http://www.jfugue.org/examples.html
  * */
@@ -73,6 +75,18 @@ public class TestJFugue {
 		Pattern p1 = new Pattern("Eq Ch. | Eq Ch. | Dq Eq Dq Cq").setVoice(0).setInstrument("Piano");
 		Pattern p2 = new Pattern("Rw     | Rw     | GmajQQQ  CmajQ").setVoice(1).setInstrument("Flute");
 		player.play(p1, p2);
+	}
+	
+	private void testBook1(Player player){
+		
+		 player.play("C");
+		 player.play("C7h");
+		 player.play("C5maj7w");
+		 player.play("G5h+B5h+C6q_D6q");
+		 player.play("G5q G5q F5q E5q D5h");
+		 player.play("T[Allegro] V0 I0 G6q A5q V1 A5q G6q");
+		 player.play("V0 Cmajw V1 I[Flute] G4q E4q C4q E4q");
+		 player.play("T120 V0 I[Piano] G5q G5q V9 [Hand_Clap]q Rq"); 
 	}
 
 }
